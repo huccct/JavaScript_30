@@ -1,2 +1,6 @@
 # JavaScript_30
-This is some pratices about javascipt.
+### This is some pratices about javascipt.
+
+> Coding Life
+
+Make some records.
