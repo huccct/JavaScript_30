@@ -28,7 +28,7 @@
         function findMatches(wordToMatch, cities) {
             return cities.filter(place => {
                 //here we need to figure out if the city or the state matches what was searched
-                const regex = new RegExp(wordToMatch, 'gi');
+                const regex = new RegExp(wordToMatch, 'gi'); //g：全局匹配 i：忽略大小写
                 return place.city.match(regex) || place.state.match(regex);
             })
         }
