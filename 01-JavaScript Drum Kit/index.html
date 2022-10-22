@@ -65,9 +65,14 @@
             const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
             const key = document.querySelector(`.key[data-key="${e.keyCode}"]`)
             if (!audio) return; //stop the function from running all together
-            audio.currentTime = 0; //rewind to the start
+            console.log(audio);
+            audio.currentTime = 0; //rewind to the start currentTime 属性设置或返回音频播放的当前位置（以秒计）
             audio.play();
             key.classList.add('playing');
+
+            // play() 方法开始播放当前的音频。
+            // 提示：该方法通常与 pause() 方法一起使用。
+            // 提示： 使用controls 属性来显示音频控件(如音频上的： play, pause, seeking, volume, 等)。
         }
 
         function removeTransition(e) {
@@ -77,6 +82,7 @@
 
         const keys = document.querySelectorAll('.key');
         keys.forEach(key => {
+            //当element元素的transition属性过渡完成就执行函数
             key.addEventListener('transitionend', removeTransition);
         })
 
