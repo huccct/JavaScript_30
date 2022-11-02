@@ -25,6 +25,7 @@
             .then(blob => blob.json())
             .then(data => cities.push(...data));
 
+        console.log(cities);
         function findMatches(wordToMatch, cities) {
             return cities.filter(place => {
                 //here we need to figure out if the city or the state matches what was searched
